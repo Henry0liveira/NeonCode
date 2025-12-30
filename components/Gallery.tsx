@@ -47,16 +47,15 @@ export default function Gallery() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group relative flex flex-col w-full lg:w-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:translate-x-2 transition-all duration-500 dark:shadow-[#3b0354]/20 bg-white dark:bg-[#1a0a2e] border border-gray-200 dark:border-purple-900/30"
+              className="slide-card flex flex-col w-full lg:w-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 dark:shadow-[#3b0354]/20 bg-white dark:bg-[#1a0a2e] border border-gray-200 dark:border-purple-900/30"
             >
               {/* Imagem */}
               <div className="relative w-full h-64 overflow-hidden bg-gray-200 dark:bg-gray-800">
                 <img
                   src={dev.image}
                   alt={dev.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
               </div>
 
               {/* Conteúdo do Card */}
